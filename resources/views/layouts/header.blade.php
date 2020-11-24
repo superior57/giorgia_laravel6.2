@@ -7,7 +7,7 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item {{ Request::segment(1) === 'home' ? 'active' : '' }}"><a href="home" class="nav-link">Home</a></li>
+                <li class="nav-item {{ Request::segment(1) === 'welcome' ? 'active' : '' }}"><a href="welcome" class="nav-link">Home</a></li>
                 <li class="nav-item {{ Request::segment(1) === 'vessel' ? 'active' : '' }}"><a href="vessel" class="nav-link">Vessel</a></li>
                 <li class="nav-item {{ Request::segment(1) === 'experience' ? 'active' : '' }}"><a href="experience" class="nav-link">Experience</a></li>
                 <li class="nav-item {{ Request::segment(1) === 'crew' ? 'active' : '' }}"><a href="crew" class="nav-link">Crew</a></li>

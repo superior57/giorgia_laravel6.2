@@ -12,12 +12,25 @@
 */
 
 Route::get('/', function () {
-    return redirect('/home');
+    return redirect('/welcome');
 });
 
-Route::get('home','HomeController@index');
+Route::get('welcome','WelcomeController@index');
 Route::get('vessel','VesselController@index');
 Route::get('experience','ExperienceController@index');
 Route::get('crew','CrewController@index');
 Route::get('booking','BookingController@index');
 Route::get('contact','ContactController@index');
+Auth::routes();
+
+
+Route::get('/admin', function () {
+    return redirect('/admin/home');
+});
+
+Route::get('/admin/home', 'Admin\HomeController@index');
+Route::get('/admin/vessel', 'Admin\VesselController@index');
+
+Route::post('/home_hero_save', 'Admin\HomeController@saveHeroImage');
+
+
