@@ -32,5 +32,6 @@ Route::get('/admin/home', 'Admin\HomeController@index');
 Route::get('/admin/vessel', 'Admin\VesselController@index');
 
 Route::post('/home_hero_save', 'Admin\HomeController@saveHeroImage');
+Route::post('/home_introduction_save', 'Admin\HomeController@saveIntroduction');
 
 

@@ -662,16 +662,45 @@ $('#home_hero_save').click(function () {
 
 
 
-function readURL(input) {
-    if (input.files && input.files[0]) {
+function readURL(elem) {
+    if (elem.files && elem.files[0]) {
         var reader = new FileReader();
+        id = elem.id;
+        
+        parent=$('#'+id).parent('span');
+        parent_id=parent.attr('id');
+        sibling=$('#'+parent_id).siblings('div');
+        sibling_id=sibling.attr('id');
+        child=$('#'+sibling_id).children('img');
 
         reader.onload = function (e) {
-            $('#hero_view')
-                .attr('src', e.target.result);
+            child.attr('src', e.target.result);
         };
 
-        reader.readAsDataURL(input.files[0]);
+        reader.readAsDataURL(elem.files[0]);
     }
 }
 
+
+$('#home_introduction_save').click(function () {
+    var introduction = $('#admin_home_introduction').val();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var formData= new FormData();
+    formData.append('introduction', introduction);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/home_introduction_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});

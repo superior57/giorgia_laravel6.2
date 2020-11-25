@@ -1032,7 +1032,7 @@ body.two-sidebar.sidebar-main .iq-sidebar-logo { width: 60px }
 .two-sidebar.sidebar-main .wrapper-menu.open { transform: rotate(0deg); }
 
 .admin_hero_image{
-  width:100%;
+  max-width:100%;
 }
 
 
@@ -1047,6 +1047,7 @@ body.two-sidebar.sidebar-main .iq-sidebar-logo { width: 60px }
 .fileinput-button {
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .fileinput-button input {
   position: absolute;
@@ -1055,7 +1056,7 @@ body.two-sidebar.sidebar-main .iq-sidebar-logo { width: 60px }
   margin: 0;
   font-size: 200px;
   direction: ltr;
-  cursor: pointer;
+  
 }
 
 .admin_introduction{
@@ -1063,6 +1064,7 @@ body.two-sidebar.sidebar-main .iq-sidebar-logo { width: 60px }
   height:100px;
   border:1px solid grey;
   outline:none;
+  margin-top:20px;
 }
 
 .admin_introduction:focus{
@@ -1075,11 +1077,25 @@ body.two-sidebar.sidebar-main .iq-sidebar-logo { width: 60px }
   outline:none;
   width:70px;
   height:30px;
-  margin-left:30px;
+  margin-right:30px;
 }
 .admin_save:hover{
   background-color: #00ca00;
 }
 .admin_title{
-  margin-bottom:20px;
+  margin-bottom:10px;
+}
+
+.ml_15{
+  margin-left:15px;
+}
+
+.mt_20{
+  margin-top:20px;
+}
+
+.image_container{
+  padding:0;
+  width:100%;
+  margin-top:20px;
 }

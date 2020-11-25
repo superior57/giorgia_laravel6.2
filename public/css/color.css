@@ -1,0 +1,65 @@
+/*==================================
+Theme Color All Codes Variable
+==================================*/
+:root {
+	 --primary-theme-color: #f4c024;  /* theme primary color */
+}
+:root {
+	 --secondery-theme-color: #0943a0;  /* theme secondery color */
+}
+:root {
+	 --dark-theme-color: #1a1a1a;  /* theme dark font color */
+}
+:root {
+	 --gray-color: #f5f5f5;  /* theme light color */
+}
+:root {
+	 --white-color: #fff;  /* theme white font color */
+}
+:root{
+	--bg-dark: #022762; /* theme dark font color */
+}
+:root {
+	 --black-color: #000;  /* theme black font color */
+}
+:root {
+	 --dark-text-color: #a5a5a5;  /* theme light color */
+}
+:root {
+	 --body-text-color: #818181;  /* theme body font color */
+}
+:root{
+	--light-gray-color: #dadada; /* light gray color */
+}
+
+/*==================================
+ Overlay
+ ==================================*/
+ :root{
+ 	--theme-overlay-secondery-color-4: rgba(9, 67, 160, .4)
+ }
+ :root{
+ 	--theme-overlay-secondery-color-6: rgba(9, 67, 160, .65)
+ }
+ :root{
+ 	--theme-overlay-secondery-color-8: rgba(9, 67, 160, .8)
+ }
+ :root{
+ 	--theme-overlay-secondery-deep-color: rgba(2, 21, 52, .7)
+ }
+ :root{
+ 	--theme-overlay-secondery-dark-color: rgba(2, 39, 98, 0.90)
+ }
+ :root{
+	--overlay-white-color: rgba(255, 255, 255, 0.8)
+ }
+/*==================================
+Font Variable
+==================================*/
+:root {
+	 --theme-body-font: 'Montserrat', sans-serif;  /* Font use for normal text and body text */
+}
+:root {
+	 --theme-highlight-font: 'Oleo Script', cursive;  /* Font used in title or special area */
+}
+

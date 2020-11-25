@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Storage;
 
 use App\Heroimage;
 use App\Introduction;
+use App\Interior;
+use App\Exterior;
 
 
 class HomeController extends Controller
@@ -31,15 +33,26 @@ class HomeController extends Controller
     {
         $heroImage = Heroimage::all();
         $introduction = Introduction::all();
-        return view('admin.dashboard',['heroImage'=>$heroImage,'introduction'=>$introduction]);
+        $interiors = Interior::all();
+        $exteriors = Exterior::all();
+        return view('admin.dashboard',['heroImage'=>$heroImage,'introduction'=>$introduction,'interiors'=>$interiors,'exteriors'=>$exteriors]);
     }
 
     public function saveHeroImage(Request $request){
         $file = $request->file('file');
         $path = Storage::putFile('public', $file);
         $filename = substr($path,7);
+        
+        $result = Heroimage::updateHeroImage($filename,1);
+        
+        return response()->json($result);
+    }
 
-        return response()->json($filename);
+    public function saveIntroduction(Request $request) {
+        $introduction = $request->input('introduction');
+        $result = Introduction::saveIntroduction($introduction,1);
+        
+        return response()->json($result);
     }
     
 }
