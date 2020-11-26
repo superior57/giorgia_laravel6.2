@@ -4,8 +4,7 @@
         <div class="iq-sidebar-logo">
             <div class="top-logo">
                 <a href="welcome" class="logo">
-                    <img src="images/logo.png" class="img-fluid" alt="">
-                    <span>Sofbox</span>
+                    <span>Home</span>
                 </a>
             </div>
         </div>

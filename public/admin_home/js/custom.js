@@ -659,19 +659,809 @@ $('#home_hero_save').click(function () {
     });
 });
 
+function saveInterior(button) {
+    id=button.id;
+    num=parseInt(id.slice(14));
+
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#home_interior_upload_'+String(num)).prop('files')[0];
+    formData.append('file', file);
+    formData.append('num', num);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/home_interior_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+$('#addInterior').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#home_add_interior_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/home_interior_add",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+            if(response=='success')
+             {
+                window.location.reload();
+             }
+             else{
+                alert("Internal Server Error");
+             }
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+function saveExterior(button) {
+    id=button.id;
+    num=parseInt(id.slice(14));
+
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#home_exterior_upload_'+String(num)).prop('files')[0];
+    formData.append('file', file);
+    formData.append('num', num);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/home_exterior_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
 
 
 
-function readURL(input) {
-    if (input.files && input.files[0]) {
+
+$('#addExterior').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#home_add_exterior_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/home_exterior_add",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+            if(response=='success')
+             {
+                window.location.reload();
+             }
+             else{
+                alert("Internal Server Error");
+             }
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+
+
+
+
+function readURL(elem) {
+    if (elem.files && elem.files[0]) {
         var reader = new FileReader();
+        id = elem.id;
+        
+        parent=$('#'+id).parent('span');
+        parent_id=parent.attr('id');
+        sibling=$('#'+parent_id).siblings('div');
+        sibling_id=sibling.attr('id');
+        child=$('#'+sibling_id).children('img');
 
         reader.onload = function (e) {
-            $('#hero_view')
-                .attr('src', e.target.result);
+            child.attr('src', e.target.result);
         };
 
-        reader.readAsDataURL(input.files[0]);
+        reader.readAsDataURL(elem.files[0]);
     }
 }
 
+
+$('#home_introduction_save').click(function () {
+    var introduction = $('#admin_home_introduction').val();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var formData= new FormData();
+    formData.append('introduction', introduction);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/home_introduction_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+
+$('#home_food_save').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#food_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/home_food_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#home_toy_save').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#toy_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/home_toy_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#home_location_save').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#location_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/home_location_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#vessel_hero_save').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#vessel_hero_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/vessel_hero_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+
+$('#vessel_introduction_save').click(function () {
+    var introduction = $('#admin_vessel_introduction').val();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var formData= new FormData();
+    formData.append('introduction', introduction);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/vessel_introduction_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#vessel_interiortext_save').click(function () {
+    var introduction = $('#admin_vessel_interiortext').val();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var formData= new FormData();
+    formData.append('introduction', introduction);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/vessel_interiortext_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#vessel_exteriortext_save').click(function () {
+    var introduction = $('#admin_vessel_exteriortext').val();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var formData= new FormData();
+    formData.append('introduction', introduction);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/vessel_exteriortext_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#specification_save').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#flag_upload').prop('files')[0];
+    var length = $('#length').val();
+    var beam = $('#beam').val();
+    var draft = $('#draft').val();
+    var built = $('#built').val();
+    var builder = $('#builder').val();
+    var engines = $('#engines').val();
+    var hull = $('#hull').val();
+    var hull_type = $('#hull_type').val();
+    var cabins = $('#cabins').val();
+    var guests = $('#guests').val();
+    var crew = $('#crew').val();
+    var speed = $('#speed').val();
+    var range = $('#range').val();
+  
+    formData.append('file', file);
+    formData.append('length', length);
+    formData.append('beam', beam);
+    formData.append('draft', draft);
+    formData.append('built', built);
+    formData.append('builder', builder);
+    formData.append('engines', engines);
+    formData.append('hull', hull);
+    formData.append('hull_type', hull_type);
+    formData.append('cabins', cabins);
+    formData.append('guests', guests);
+    formData.append('crew', crew);
+    formData.append('speed', speed);
+    formData.append('range', range);
+    formData.append('_token', token);
+    $.ajax({
+        url: "/specification_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#deck1_save').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#deck1_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/deck1_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+
+$('#deck2_save').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#deck2_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/deck2_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#deck3_save').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#deck3_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/deck3_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#deck4_save').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#deck4_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/deck4_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#experience_hero_save').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#experience_hero_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/experience_hero_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+function saveFood(button) {
+    id=button.id;
+    num=parseInt(id.slice(10));
+
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#experience_food_upload_'+String(num)).prop('files')[0];
+    formData.append('file', file);
+    formData.append('num', num);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/experience_food_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+$('#addFood').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#add_food_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/experience_food_add",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+            if(response=='success')
+             {
+                window.location.reload();
+             }
+             else{
+                alert("Internal Server Error");
+             }
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#food_description_save').click(function () {
+    var food_description = $('#admin_food_description').val();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var formData= new FormData();
+    formData.append('food_description', food_description);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/food_description_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+function saveToy(button) {
+    id=button.id;
+    num=parseInt(id.slice(9));
+
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#experience_toy_upload_'+String(num)).prop('files')[0];
+    formData.append('file', file);
+    formData.append('num', num);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/experience_toy_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+$('#addToy').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#add_toy_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/experience_toy_add",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+            if(response=='success')
+             {
+                window.location.reload();
+             }
+             else{
+                alert("Internal Server Error");
+             }
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#toy_description_save').click(function () {
+    var toy_description = $('#admin_toy_description').val();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var formData= new FormData();
+    formData.append('toy_description', toy_description);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/toy_description_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+function saveDestination(button) {
+    id=button.id;
+    num=parseInt(id.slice(17));
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#destination_upload_'+String(num)).prop('files')[0];
+    formData.append('file', file);
+    formData.append('num', num);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/destination_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+$('#addDestination').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#add_destination_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/destination_add",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+            if(response=='success')
+             {
+                window.location.reload();
+             }
+             else{
+                alert("Internal Server Error");
+             }
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#crew_hero_save').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#crew_hero_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/crew_hero_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+
+function saveCrew(button) {
+    id=button.id;
+    num=parseInt(id.slice(10));
+    var color = $('#crew_color_'+String(num)).val();
+    var file = $('#crew_upload_'+String(num)).prop('files')[0];
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var name = $('#crew_name_'+String(num)).val();
+    var position = $('#crew_position_'+String(num)).val();
+    var text = $('#crew_text_'+String(num)).val();
+    var filename = $('#imagename_'+String(num)).text();
+    
+    formData.append('file', file);
+    formData.append('_token', token);
+    formData.append('name', name);
+    formData.append('position', position);
+    formData.append('text', text);
+    formData.append('num',num);
+    formData.append('filename',filename);
+    formData.append('color', color);
+
+    $.ajax({
+        url: "/crew_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+// $('#addCrew').click(function () {
+//     var formData= new FormData();
+//     var token = $('meta[name="csrf-token"]').attr('content');
+//     var file = $('#crew_upload').prop('files')[0];
+//     var name = $('#crew_name').val();
+//     var position = $('#crew_position').val();
+//     var text = $('#crew_text').val();
+//     var color = $('#crew_color').val();
+//     formData.append('file', file);
+//     formData.append('_token', token);
+//     formData.append('name', name);
+//     formData.append('position', position);
+//     formData.append('text', text);
+//     formData.append('color', color);
+
+//     $.ajax({
+//         url: "/crew_add",
+//         type: "POST",
+//         dataType: "json",
+//         contentType: false,
+//         processData: false,
+//         data: formData,
+//         success: function (response) {
+//             console.log(response);
+//             if(response=='success')
+//              {
+//                 window.location.reload();
+//              }
+//              else{
+//                 alert("Internal Server Error");
+//              }
+//         },
+//         error: function (error) {
+//             console.log(error);
+//         }
+//     });
+// });

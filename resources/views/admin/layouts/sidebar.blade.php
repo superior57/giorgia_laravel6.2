@@ -25,13 +25,11 @@
                     </a>
                 </li>
                 <li class=" {{ Request::segment(2) === 'experience' ? 'active' : '' }}">
-                    <a href="#dashboard" class="iq-waves-effect collapsed" data-toggle="collapse"
-                        aria-expanded="true"><i class="ri-store-3-line"></i><span>Experience</span>
+                    <a href="experience" class="iq-waves-effect collapsed"><i class="ri-store-3-line"></i><span>Experience</span>
                     </a>
                 </li>
                 <li class=" {{ Request::segment(2) === 'crew' ? 'active' : '' }}">
-                    <a href="#dashboard" class="iq-waves-effect collapsed" data-toggle="collapse"
-                        aria-expanded="true"><i class="ri-group-line"></i><span>Crew</span>
+                    <a href="crew" class="iq-waves-effect collapsed" ><i class="ri-group-line"></i><span>Crew</span>
                     </a>
                 </li>
                 <li class=" {{ Request::segment(2) === 'enquire' ? 'active' : '' }}">

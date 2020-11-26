@@ -54,7 +54,6 @@
 						@foreach ($interiors as $interior)
 						<div class="item">
 						  	<a href='vessel'>
-							  	<!-- <img src="{{ asset($interior->image) }}" style="width:100%;"> -->
 								<img src="{{ asset('storage/'.$interior->image) }}">
 							</a>
               			</div>
