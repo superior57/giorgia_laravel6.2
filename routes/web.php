@@ -32,7 +32,7 @@ Route::get('/admin/home', 'Admin\HomeController@index');
 
 Route::post('/home_hero_save', 'Admin\HomeController@saveHeroImage');
 Route::post('/home_introduction_save', 'Admin\HomeController@saveIntroduction');
-
+Route::post('/home_hero_add', 'Admin\HomeController@addHero');
 Route::post('/home_interior_save', 'Admin\HomeController@saveInterior');
 Route::post('/home_interior_add', 'Admin\HomeController@addInterior');
 
@@ -70,3 +70,9 @@ Route::get('/admin/crew', 'Admin\CrewController@index');
 Route::post('/crew_hero_save', 'Admin\CrewController@saveHeroImage');
 Route::post('/crew_save', 'Admin\CrewController@saveCrew');
 Route::post('/crew_add', 'Admin\CrewController@addCrew');
+
+Route::get('/admin/enquire', 'Admin\EnquireController@index');
+Route::post('/enquire_hero_save', 'Admin\EnquireController@saveHeroImage');
+
+Route::get('/admin/contact', 'Admin\ContactController@index');
+Route::post('/contact_save', 'Admin\ContactController@contactSave');

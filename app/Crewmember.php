@@ -22,7 +22,7 @@ class Crewmember extends Model
         return 'success';
     }
 
-    public static function addInteriorImage($data, $filename) {
+    public static function addCrew($data, $filename) {
         $newdata['name'] = $data['name'];
         $newdata['position'] = $data['position'];
         $newdata['image'] = $filename;

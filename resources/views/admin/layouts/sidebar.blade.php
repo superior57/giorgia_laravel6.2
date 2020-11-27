@@ -33,13 +33,11 @@
                     </a>
                 </li>
                 <li class=" {{ Request::segment(2) === 'enquire' ? 'active' : '' }}">
-                    <a href="#dashboard" class="iq-waves-effect collapsed" data-toggle="collapse"
-                        aria-expanded="true"><i class="ri-shopping-cart-line"></i><span>Enquire</span>
+                    <a href="enquire" class="iq-waves-effect collapsed"><i class="ri-shopping-cart-line"></i><span>Enquire</span>
                     </a>
                 </li>
                 <li class=" {{ Request::segment(2) === 'contact' ? 'active' : '' }}">
-                    <a href="#dashboard" class="iq-waves-effect collapsed" data-toggle="collapse"
-                        aria-expanded="true"><i class="ri-mail-line"></i><span>Contact</span>
+                    <a href="contact" class="iq-waves-effect collapsed"><i class="ri-mail-line"></i><span>Contact</span>
                     </a>
                 </li>
             </ul>

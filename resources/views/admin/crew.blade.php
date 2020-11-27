@@ -47,21 +47,21 @@
                     <input type="color" id='crew_color_{{$crewmember->id}}' value = "{{$crewmember->backgroundcolor}}">
                 </div>
                 @endforeach
-
+ 
                 <div class='col-sm-3 mt_20'>
 
-                    <button id='crew_save' class='admin_add' onclick="addCrew(this)">add</button>
+                    <button id='crew_add' class='admin_add' >add</button>
                     <span class="change_btn fileinput-button" id="crew_add_btn">
                         <i class="fa fa-upload"></i>
                         <span>select</span>
                         <input type="file" id="crew_upload" required="" onchange='readURL(this)'>
                     </span>
                         
-                    <div class='image_container' id="crew_uploaded_image">
-                        <img src="{{ asset('storage/'.$introduction[0]['addimage']) }}"  class='admin_hero_image' id="crew_view">
+                    <div class='image_container' id="crew_uploaded_image_contain">
+                        <img src="{{ asset('storage/'.$introduction[0]['addimage']) }}"  class='admin_hero_image' id="admin_crew_view">
                     </div>
                 </div>
-                <!-- <div class='col-sm-9' style='margin-top:50px;'>
+                <div class='col-sm-9' style='margin-top:50px;'>
                     <label for="">Name</label><br>
                     <input type="text"  class='specification_input' id="crew_name"><br>
                     <label for="">Position</label><br>
@@ -70,7 +70,7 @@
                     <textarea id="crew_text" class='admin_crew_text' ></textarea>
                     <label for="">Background Color</label>
                     <input type="color" id='crew_color'>
-                </div> -->
+                </div>
 
             </div>
         </div>

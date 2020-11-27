@@ -4,20 +4,36 @@
 
 <div class="container-fluid">
     <div class="col-lg-12">
-        <div>
-            <div class='col-sm-6'>
+    <h4 class='admin_title'>Hero Image</h4>
+        <div class='row'>
 
-                <h4 class='admin_title'>Hero Image</h4>
-                <button id='home_hero_save' class='admin_save'>save</button>
-                <span class="change_btn fileinput-button" id='hero_parent'>
+            @foreach ($heroImages as $heroImage)
+            <div class='col-md-3 col-sm-6 mt_20'>
+                <button id='home_hero_save_{{$heroImage->id}}' class='admin_save' onclick="saveHomeHero(this)">save</button>
+                <span class="change_btn fileinput-button" id='hero_parent_{{$heroImage->id}}'>
                     <i class="fa fa-upload"></i>
                     <span>select</span>
-                    <input type="file" name="hero_upload" id="hero_upload" required="" onchange='readURL(this)'>
+                    <input type="file" id="hero_upload_{{$heroImage->id}}" required="" onchange='readURL(this)'>
                 </span>
-                <div class='image_container' id='uploaded_image'>
-                    <img src="{{ asset('storage/'.$heroImage[0]['image']) }}"  class='admin_hero_image' id='hero_view'>
+                <div class='image_container' id='uploaded_image_{{$heroImage->id}}'>
+                    <img src="{{ asset('storage/'.$heroImage->image) }}"  class='admin_hero_image' id='hero_view_{{$heroImage->id}}'>
                 </div>
             </div>
+            @endforeach
+
+            <div class='col-md-3 col-sm-6 mt_20'>
+                <button id='home_hero_add' class='admin_add'>add</button>
+                <span class="change_btn fileinput-button" id="home_add_hero">
+                    <i class="fa fa-upload"></i>
+                    <span>select</span>
+                    <input type="file" id="home_add_hero_upload" required="" onchange='readURL(this)'>
+                </span>
+                <div class='image_container' id="add_hero_uploaded_image">
+                    <img src="{{ asset('storage/'.$introduction[0]['addimage']) }}"  class='admin_hero_image' id="add_hero_view">
+                </div>
+            </div>
+        
+        </div>
             <div class='col-sm-6' style='clear:both;'>
 
                 <h4 class='admin_title mt_20'>Introduction</h4>
@@ -136,7 +152,7 @@
                     </div>
                 
             </div>
-        </div>
+        
     </div>
 </div>
 

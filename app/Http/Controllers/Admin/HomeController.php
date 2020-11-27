@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 
-use App\Heroimage;
+use App\Homeheroimage;
 use App\Introduction;
 use App\Interior;
 use App\Exterior;
@@ -31,20 +31,29 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $heroImage = Heroimage::all();
+        $heroImages = Homeheroimage::all();
         $introduction = Introduction::all();
         $interiors = Interior::all();
         $exteriors = Exterior::all();
-        return view('admin.dashboard',['heroImage'=>$heroImage,'introduction'=>$introduction,'interiors'=>$interiors,'exteriors'=>$exteriors]);
+        return view('admin.dashboard',['heroImages'=>$heroImages,'introduction'=>$introduction,'interiors'=>$interiors,'exteriors'=>$exteriors]);
     }
 
     public function saveHeroImage(Request $request){
         $file = $request->file('file');
         $path = Storage::putFile('public', $file);
+        $id=$request->num;
         $filename = substr($path,7);
         
-        $result = Heroimage::updateHeroImage($filename,1);
+        $result = Homeheroimage::updateHeroImage($filename,$id);
         
+        return response()->json($result);
+    }
+
+    public function addHero(Request $request) {
+        $file = $request->file('file');
+        $path = Storage::putFile('public', $file);
+        $filename = substr($path,7);
+        $result = Homeheroimage::addHeroImage($filename);
         return response()->json($result);
     }
  

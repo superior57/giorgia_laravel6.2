@@ -635,12 +635,15 @@ Index Of Script
 
 
 
+function saveHomeHero(button) {
+    id=button.id;
+    num=parseInt(id.slice(15));
 
-$('#home_hero_save').click(function () {
     var formData= new FormData();
     var token = $('meta[name="csrf-token"]').attr('content');
-    var file = $('#hero_upload').prop('files')[0];
+    var file = $('#hero_upload_'+String(num)).prop('files')[0];
     formData.append('file', file);
+    formData.append('num', num);
     formData.append('_token', token);
 
     $.ajax({
@@ -652,6 +655,36 @@ $('#home_hero_save').click(function () {
         data: formData,
         success: function (response) {
             console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+$('#home_hero_add').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#home_add_hero_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/home_hero_add",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+            if(response=='success')
+             {
+                window.location.reload();
+             }
+             else{
+                alert("Internal Server Error");
+             }
         },
         error: function (error) {
             console.log(error);
@@ -1428,40 +1461,98 @@ function saveCrew(button) {
     });
 }
 
-// $('#addCrew').click(function () {
-//     var formData= new FormData();
-//     var token = $('meta[name="csrf-token"]').attr('content');
-//     var file = $('#crew_upload').prop('files')[0];
-//     var name = $('#crew_name').val();
-//     var position = $('#crew_position').val();
-//     var text = $('#crew_text').val();
-//     var color = $('#crew_color').val();
-//     formData.append('file', file);
-//     formData.append('_token', token);
-//     formData.append('name', name);
-//     formData.append('position', position);
-//     formData.append('text', text);
-//     formData.append('color', color);
+$('#crew_add').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#crew_upload').prop('files')[0];
+    var name = $('#crew_name').val();
+    var position = $('#crew_position').val();
+    var text = $('#crew_text').val();
+    var color = $('#crew_color').val();
+    formData.append('file', file);
+    formData.append('_token', token);
+    formData.append('name', name);
+    formData.append('position', position);
+    formData.append('text', text);
+    formData.append('color', color);
 
-//     $.ajax({
-//         url: "/crew_add",
-//         type: "POST",
-//         dataType: "json",
-//         contentType: false,
-//         processData: false,
-//         data: formData,
-//         success: function (response) {
-//             console.log(response);
-//             if(response=='success')
-//              {
-//                 window.location.reload();
-//              }
-//              else{
-//                 alert("Internal Server Error");
-//              }
-//         },
-//         error: function (error) {
-//             console.log(error);
-//         }
-//     });
-// });
+    $.ajax({
+        url: "/crew_add",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+            if(response=='success')
+             {
+                window.location.reload();
+             }
+             else{
+                alert("Internal Server Error");
+             }
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#enquire_hero_save').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var file = $('#enquire_hero_upload').prop('files')[0];
+    formData.append('file', file);
+    formData.append('_token', token);
+
+    $.ajax({
+        url: "/enquire_hero_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
+$('#contact_save').click(function () {
+    var formData= new FormData();
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var address = $('#admin_address').val();
+    var phone = $('#admin_phone').val();
+    var email = $('#admin_email').val();
+    var facebook = $('#admin_facebook').val();
+    var twitter = $('#admin_twitter').val();
+    var instagram = $('#admin_instagram').val();
+
+    formData.append('address', address);
+    formData.append('_token', token);
+    formData.append('phone', phone);
+    formData.append('email', email);
+    formData.append('facebook', facebook);
+    formData.append('twitter', twitter);
+    formData.append('instagram', instagram);
+
+    $.ajax({
+        url: "/contact_save",
+        type: "POST",
+        dataType: "json",
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+});
+
