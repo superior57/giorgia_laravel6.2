@@ -496,10 +496,15 @@ footer .social-media li:hover a,
 	background: var(--theme-overlay-secondery-color-4);
 }
 .overlay-secondery-opacity-65:before,
-[class*="overlay-"]:before,
+/* [class*="overlay-"]:before, */
 .slider-overlay:before{
-	background: var(--theme-overlay-secondery-color-6) !important;
+	background: var(--overlay-dark) !important;
 }
+/* [class*="overlay"]:before */
+/* .overlay:before */
+/* {
+	background: var(--overlay-dark) !important;
+} */
 .overlay-secondery-opacity-80:before,
 .header-1.fixed-top,
 .header-2.fixed-top{
@@ -4769,4 +4774,8 @@ h3,
 
 .flag{
 	width:100px; 
+}
+
+#slider5:after {
+	background: var(--theme-overlay-secondery-color-4);
 }

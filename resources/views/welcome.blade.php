@@ -8,32 +8,37 @@
 
 
 <div class="position-relative" style="height:100vh;margin:0 auto;margin-bottom: 0px;">
-	<div id="slider5" class="owl-carousel" style="z-index: 1;">
+	<div id="slider5" class="owl-carousel slider-5" style="z-index: 1;">
 		<!-- Slide 1-->
 		<div class="item active"
 			data-ls="bgsize:cover; bgposition:50% 50%; duration:8000; transition2d:3; timeshift:-500; deeplink:home; kenburnszoom:in; kenburnsrotate:0; kenburnsscale:1.1; parallaxevent:scroll; parallaxdurationmove:500;">
 			<img width="1920" height="1080" src="{{asset('images/Giorgia - Rear Profile.jpg')}}" class="ls-bg" alt="" />
+			<img width="300" height="300" class="" src="{{ asset('images/WhatsApp Image 2019-11-02 at 11.30.25 PM(2).jpeg') }}" alt="">
+			<div class="overlay"></div>
 		</div>
 
 		<!-- Slide 2-->
 		<div class="item"
 			data-ls="bgsize:cover; bgposition:50% 50%; duration:8000; transition2d:3; deeplink:latest-works; kenburnszoom:out; kenburnsrotate:0; kenburnsscale:1.1; parallaxtype:3d; parallaxevent:scroll; parallaxdurationmove:500; parallaxrotate:4;">
 			<img width="1920" height="1080" src="{{asset('images/Giorgia - Starboard.jpg')}}" class="ls-bg" alt="" />
+			<div class="overlay"></div>
 		</div>
 
 		<!-- Slide 3-->
 		<div class="item"
 			data-ls="bgsize:cover; bgposition:50% 50%; duration:8000; transition2d:3; deeplink:contact-us; kenburnszoom:in; kenburnsscale:1.2; parallaxevent:scroll;">
 			<img width="1920" height="1080" src="{{asset('images/[36m-Yacht-GIORGIA]-1618-72.jpg')}}" class="ls-bg" alt="" />
+			<div class="overlay"></div>
 		</div>
 
 		<!-- Slide 4-->
 		<div class="item"
 			data-ls="bgsize:cover; bgposition:50% 50%; duration:8000; transition2d:3; deeplink:contact-us; kenburnszoom:in; kenburnsscale:1.2; parallaxevent:scroll;">
 			<img width="1920" height="1080" src="{{asset('images/[36m-Yacht-GIORGIA]-1618-40.jpg')}}" class="ls-bg" alt="" />
+			<div class="overlay"></div>
 		</div>
 	</div>
-    <!-- <div class="angle-shade-2" ></div> -->
+	<!-- <div class="angle-shade-2" ></div> -->
 </div>
 <!-- Slider End -->
 
@@ -311,55 +316,55 @@
 <!-- Living Room 2 Section End --> 
 
 <!-- Blank Area Start -->
-<div class="full-row overlay-1 bg-standby" style="background-image: url('images/WhatsApp Image 2019-11-02 at 11.30.31 PM(2).jpeg'); padding-bottom: 430px">
-			<div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="main-title-area text-center text-white">
-                            <h2 class="title left-right-line mb-3 text-white">Gallery</h2>
-                        </div>
-						<!-- <span class="subtext text-white text-center mb-5 box-width">Across the street from the ordinary</span>  -->
-                    </div>
-                </div>
+<div class="full-row overlay-secondery-opacity-65 bg-standby" style="background-image: url('images/WhatsApp Image 2019-11-02 at 11.30.31 PM(2).jpeg'); padding-bottom: 430px">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="main-title-area text-center text-white">
+					<h2 class="title left-right-line mb-3 text-white">Gallery</h2>
+				</div>
+				<!-- <span class="subtext text-white text-center mb-5 box-width">Across the street from the ordinary</span>  -->
 			</div>
 		</div>
-        <!-- Blank Area End --> 
+	</div>
+</div>
+<!-- Blank Area End --> 
         
-        <!-- Photo Gallery Section Start -->
-        <section class="full-row" style="margin-top: -500px;">
-            <div class="container">
-                <div class="row photo-gallery">
-                    <div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(2).jpeg" data-fancybox="gallery">
-                        <div class="overlay-secondery-opacity-65"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(2).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
-                        </a> </div>
-                    <div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(3).jpeg" data-fancybox="gallery">
-                        <div class="overlay-secondery-opacity-65"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(3).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
-                        </a> </div>
-                    <div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(4).jpeg" data-fancybox="gallery">
-                        <div class="overlay-secondery-opacity-65"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(4).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
-                        </a> </div>
-                    <div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(5).jpeg" data-fancybox="gallery">
-                        <div class="overlay-secondery-opacity-65"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(5).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
-                        </a> </div>
-                    <div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(6).jpeg" data-fancybox="gallery">
-                        <div class="overlay-secondery-opacity-65"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(6).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
-                        </a> </div>
-                    <div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.26 PM(5).jpeg" data-fancybox="gallery">
-                        <div class="overlay-secondery-opacity-65"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.26 PM(5).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
-                        </a> </div>
-                    <div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.27 PM(1).jpeg" data-fancybox="gallery">
-                        <div class="overlay-secondery-opacity-65"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.27 PM(1).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
-                        </a> </div>
-                    <div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.27 PM.jpeg" data-fancybox="gallery">
-                        <div class="overlay-secondery-opacity-65"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.27 PM.jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
-                        </a> </div>
-                    <div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.28 PM(5).jpeg" data-fancybox="gallery">
-                        <div class="overlay-secondery-opacity-65"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.28 PM(5).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
-                        </a> </div>
-                </div>
-            </div>
-        </section>
-        <!-- Photo Gallery Section End --> 
+<!-- Photo Gallery Section Start -->
+<section class="full-row" style="margin-top: -500px;">
+	<div class="container">
+		<div class="row photo-gallery">
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(2).jpeg" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(2).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+				</a> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(3).jpeg" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(3).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+				</a> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(4).jpeg" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(4).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+				</a> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(5).jpeg" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(5).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+				</a> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(6).jpeg" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(6).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+				</a> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.26 PM(5).jpeg" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.26 PM(5).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+				</a> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.27 PM(1).jpeg" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.27 PM(1).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+				</a> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.27 PM.jpeg" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.27 PM.jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+				</a> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.28 PM(5).jpeg" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.28 PM(5).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+				</a> </div>
+		</div>
+	</div>
+</section>
+<!-- Photo Gallery Section End --> 
 
 @endsection
 @section('footer')
@@ -370,7 +375,6 @@
 <script>
 (function() {
     // Wrap every letter in a span
-    
 })()
 </script>
 @endpush

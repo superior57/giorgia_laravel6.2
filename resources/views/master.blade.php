@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="{{asset('css/fontawesome-all-5.2.0.min.css')}}">
     <link rel="stylesheet" href="{{asset('webfonts/flaticon/flaticon.css')}}">
     <link rel="stylesheet" href="{{asset('css/animations.css')}}">
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
+    
 
     @stack('styles')
 </head>

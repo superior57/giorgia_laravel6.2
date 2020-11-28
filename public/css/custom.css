@@ -1,0 +1,8 @@
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(2deg, #2196f394 -12%, transparent);
+}
