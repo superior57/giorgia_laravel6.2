@@ -40,7 +40,7 @@
         	<div class="row ftco-animate" style='diaplay:flex;align-items:center;'>
           		<div class="col-md-6">
             		<div class="carousel-testimony owl-carousel ">
-						@foreach ($errors as $interior)
+						@foreach ($interiors as $interior)
 						<div class="item">
 						  	<img src="{{ asset($interior->image) }}" style="width:100%;">
               			</div>

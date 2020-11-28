@@ -51,13 +51,13 @@
 							<div class="icon">
 								<span class="icon-mobile-phone"></span>
 							</div>
-		            		<p><span>Phone:</span> <a href="tel:{{$contactMethods[0]['phone']}}">+ {{$contactMethods[0]['phone']}}</a></p>
+		            		<p><span>Phone:</span> <a href="tel://1234567920">+ {{$contactMethods[0]['phone']}}</a></p>
 		        		</div>
 		          		<div class="col-md-4 text-center py-4">
 							<div class="icon">
 								<span class="icon-envelope-o"></span>
 							</div>
-		            		<p><span>Email:</span> <a href="mailto:{{$contactMethods[0]['email']}}">{{$contactMethods[0]['email']}}</a></p>
+		            		<p><span>Email:</span> <a href="mailto:info@yoursite.com">{{$contactMethods[0]['email']}}</a></p>
 		          		</div>
 		        	</div>
           		</div>
@@ -67,7 +67,7 @@
 				<ul class="ftco-footer-social list-unstyled mt-5">
 					<li class="ftco-animate"><a href="{{$contactMethods[0]['twitter']}}"><span class="icon-twitter"></span></a></li>
 					<li class="ftco-animate"><a href="{{$contactMethods[0]['facebook']}}"><span class="icon-facebook"></span></a></li>
-					<li class="ftco-animate"><a href="{{$contactMethods[0]['instagram']}}"><span class="icon-instagram"></span></a></li>
+					<li class="ftco-animate"><a href="{{$contactMethods[0]['twitter']}}"><span class="icon-instagram"></span></a></li>
 				</ul>
             </div>
           
