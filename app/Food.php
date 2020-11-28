@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\DB;
 
 class Food extends Model
 {
-    protected $table = 'foods';
     protected $fillable = ['image'];
 
     public static function updateFoodImage($filename,$id) {
