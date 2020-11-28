@@ -24,7 +24,7 @@
         	<div class="row ftco-animate heading-section" style="display:flex;align-items:center;padding:20px;">
           		<div class="col-sm-3">
 					<div class="item">
-						<img src="{{ asset($crewmember->image) }}" style="width:100%;border-radius:50%;">
+							<img src="{{ asset($crewmember->image) }}" style="width:100%;border-radius:50%;">
 					</div>
 				</div>
 				<div class="col-sm-9 explain_text_container">
