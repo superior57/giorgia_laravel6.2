@@ -12,29 +12,29 @@
 		<!-- Slide 1-->
 		<div class="item active"
 			data-ls="bgsize:cover; bgposition:50% 50%; duration:8000; transition2d:3; timeshift:-500; deeplink:home; kenburnszoom:in; kenburnsrotate:0; kenburnsscale:1.1; parallaxevent:scroll; parallaxdurationmove:500;">
-			<img width="1920" height="1080" src="{{asset('images/Giorgia - Rear Profile.jpg')}}" class="ls-bg" alt="" />
-			<img width="300" height="300" class="" src="{{ asset('images/WhatsApp Image 2019-11-02 at 11.30.25 PM(2).jpeg') }}" alt="">
+			<img width="1920" height="1080" src="{{asset('images/backgrounds/1.jpg')}}" class="ls-bg" alt="" />
+			<!-- <img width="300" height="300" class="" src="{{ asset('images/WhatsApp Image 2019-11-02 at 11.30.25 PM(2).jpeg') }}" alt=""> -->
 			<div class="overlay"></div>
 		</div>
 
 		<!-- Slide 2-->
 		<div class="item"
 			data-ls="bgsize:cover; bgposition:50% 50%; duration:8000; transition2d:3; deeplink:latest-works; kenburnszoom:out; kenburnsrotate:0; kenburnsscale:1.1; parallaxtype:3d; parallaxevent:scroll; parallaxdurationmove:500; parallaxrotate:4;">
-			<img width="1920" height="1080" src="{{asset('images/Giorgia - Starboard.jpg')}}" class="ls-bg" alt="" />
+			<img width="1920" height="1080" src="{{asset('images/backgrounds/2.jpg')}}" class="ls-bg" alt="" />
 			<div class="overlay"></div>
 		</div>
 
 		<!-- Slide 3-->
 		<div class="item"
 			data-ls="bgsize:cover; bgposition:50% 50%; duration:8000; transition2d:3; deeplink:contact-us; kenburnszoom:in; kenburnsscale:1.2; parallaxevent:scroll;">
-			<img width="1920" height="1080" src="{{asset('images/[36m-Yacht-GIORGIA]-1618-72.jpg')}}" class="ls-bg" alt="" />
+			<img width="1920" height="1080" src="{{asset('images/exterior/2.jpg')}}" class="ls-bg" alt="" />
 			<div class="overlay"></div>
 		</div>
 
 		<!-- Slide 4-->
 		<div class="item"
 			data-ls="bgsize:cover; bgposition:50% 50%; duration:8000; transition2d:3; deeplink:contact-us; kenburnszoom:in; kenburnsscale:1.2; parallaxevent:scroll;">
-			<img width="1920" height="1080" src="{{asset('images/[36m-Yacht-GIORGIA]-1618-40.jpg')}}" class="ls-bg" alt="" />
+			<img width="1920" height="1080" src="{{asset('images/exterior/1.jpg')}}" class="ls-bg" alt="" />
 			<div class="overlay"></div>
 		</div>
 	</div>
@@ -99,15 +99,15 @@
                     ordinary</span> -->
             </div>
         </div>
-        <div class="row" style="margin-bottom: 150px;">
+        <div class="row hover-shadow-lg py-4" style="margin-bottom: 150px;">
             <div class="col-lg-5">
                 <div class="img-slide">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active"> <img src="img/width/36.jpg" alt="Image not found!">
+                            <div class="carousel-item active"> <img src="{{ asset('images/interior/1.jpg') }}" alt="Image not found!">
                             </div>
-                            <div class="carousel-item"> <img src="img/width/39.jpg" alt="Image not found!"> </div>
-                            <div class="carousel-item"> <img src="img/width/40.jpg" alt="Image not found!"> </div>
+                            <div class="carousel-item"> <img src="{{ asset('images/interior/2.jpg') }}" alt="Image not found!"> </div>
+                            <div class="carousel-item"> <img src="{{ asset('images/interior/3.jpg') }}" alt="Image not found!"> </div>
                         </div>
                         <div class="slider-arrow"> 
 							<a class="carousel-control-prev" href="#carouselExampleIndicators"
@@ -122,7 +122,7 @@
                         <h3>Interior</h3>
                     </div>
 					<div class="float-right items-end">
-						<a href="#" class="btn btn-primary-bg" role="button">
+						<a href="{{ url('/vessel') }}" class="btn btn-primary-bg" role="button">
 							View More
 						</a>
 					</div>
@@ -149,7 +149,7 @@
                     ordinary</span> -->
             </div>
         </div>
-		<div class="row">            
+		<div class="row hover-shadow-lg py-4">            
 			<div class="col-lg-7">
 				<div class="py-4 px-4">
 					<p>
@@ -165,10 +165,10 @@
                 <div class="img-slide">
                     <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active"> <img src="img/width/36.jpg" alt="Image not found!">
+                            <div class="carousel-item active"> <img src="{{ asset('images/exterior/1.jpg') }}" alt="Image not found!">
                             </div>
-                            <div class="carousel-item"> <img src="img/width/39.jpg" alt="Image not found!"> </div>
-                            <div class="carousel-item"> <img src="img/width/40.jpg" alt="Image not found!"> </div>
+                            <div class="carousel-item"> <img src="{{ asset('images/exterior/2.jpg') }}" alt="Image not found!"> </div>
+                            <div class="carousel-item"> <img src="{{ asset('images/exterior/3.jpg') }}" alt="Image not found!"> </div>
                         </div>
                         <div class="slider-arrow"> <a class="carousel-control-prev" href="#carouselExampleIndicators1"
                                 role="button" data-slide="prev"> <i class="fas fa-angle-double-left"></i> </a> <a
@@ -182,7 +182,7 @@
                         <h3>Exterior</h3>
                     </div>
 					<div class="float-left items-end">
-						<a href="#" class="btn btn-primary-bg" role="button">
+						<a href="{{ url('/vessel') }}" class="btn btn-primary-bg" role="button">
 							View More
 						</a>
 					</div>
@@ -207,105 +207,106 @@
 		<table class='specification'>
 			<tr>
 				<th>Length</th>
-				<td>36.6 m (120’)</td>
+				<td>{{$specification['length']}}</td>
 			</tr>
 			<tr>
 				<th>Beam</th>
-				<td>7.86 m (26’)</td>
+				<td>{{$specification['beam']}}</td>
 			</tr>
 			<tr>
 				<th>Draft</th>
-				<td>1.96 m (6’)</td>
+				<td>{{$specification['draft']}}</td>
 			</tr>
 			<tr>
 				<th>Built</th>
-				<td>2009</td>
+				<td>{{$specification['built']}}</td>
 			</tr>
 			<tr>
 				<th>Builder</th>
-				<td>Azimut Benetti SpA</td>
+				<td>{{$specification['builder']}}</td>
 			</tr>
 			<tr>
 				<th>Engines</th>
-				<td>2 x Caterpillar C32 1550 bhp</td>
+				<td>{{ $specification['engines']}}</td>
 			</tr>
 			<tr>
 				<th>Flag</th>
-				<td><img src="images/manflag.png" alt="" class='flag'></td>
+				<td><img src="{{ asset('images/flag/manflag.png') }}" style="width: 50px; height: 30px"></td>
 			</tr>
 			<tr>
 				<th>Hull</th>
-				<td>Glass-Reinforced Plastic</td>
+				<td>{{ $specification['hull']}}</td>
 			</tr>
 			<tr>
 				<th>Hull Type</th>
-				<td>Displacement</td>
+				<td>{{ $specification['hull_type']}}</td>
 			</tr>
 			<tr>
 				<th>Cabins</th>
-				<td>5</td>
+				<td>{{ $specification['cabins']}}</td>
 			</tr>
 			<tr>
 				<th>Guests</th>
-				<td>10</td>
+				<td>{{ $specification['guests']}}</td>
 			</tr>
 			<tr>
 				<th>Crew</th>
-				<td>7</td>
+				<td>{{ $specification['crew']}}</td>
 			</tr>
 			<tr>
 				<th>Speed</th>
-				<td>13 knots (cruising) 16 knots (max)</td>
+				<td>{{ $specification['speed']}}</td>
 			</tr>
 			<tr>
 				<th>Range</th>
-				<td>3,500 mm</td>
+				<td>{!! $specification['range'] !!}</td>
 			</tr>
 		</table>
 	</div>
 </section>
+
 <section class="full-row bg-white">
 	<div class='container'>
 		<div class="row">
 			<div class="col-md-6 col-lg-4">
-				<div class="room-thumb-grid-2 hover_zoom mb-4 bg-light">
+				<div class="room-thumb-grid-2 hover_zoom mb-4 bg-light hover-shadow-lg">
 					<div class="thumb-top overflow_hidden overflow-hidden" style="height: 250px;">
 						<div class="room-size upper-place-bottom-right">12 X 15 Sqft</div>
-						<img src="images/WhatsApp Image 2019-11-02 at 11.30.28 PM(1).jpeg" alt="Booking Room"> 
+						<img src="{{ asset('images/exterior/5.jpg') }}" alt="Food"> 
 					</div>
 					<div class="room-info p-4">
 						<h6 class="title"><a class="text-secondery" href="#">Food</a></h6>
 						<span>Sami duble bed 2 window & mountain view. 24 Hours room service.</span> <span class="facility-1 text-secondery">Free Wifi / Cable Tv / Breakfast</span> </div>
 					<div class="bg-gray d-table px-4 py-3 w-100">
-						<a href="#" class="btn btn-primary-bg float-left">View Details</a>
+						<a href="{{ url('/experience') }}" class="btn btn-primary-bg float-left">View Details</a>
 						<!-- <div class="h5 per-night text-secondery">$80 <small>/ Night</small> </div> -->
 					</div>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-4">
-				<div class="room-thumb-grid-2 hover_zoom mb-4 bg-light">
+				<div class="room-thumb-grid-2 hover_zoom mb-4 bg-light hover-shadow-lg">
 					<div class="thumb-top overflow_hidden overflow-hidden" style="height: 250px;">
 						<div class="room-size upper-place-bottom-right">15 X 20 Sqft</div>
-						<img src="images/GIORGIA-yacht--28.jpg" alt="Booking Room"> </div>
+						<img src="images/exterior/10.jpg" alt="Toy"> </div>
 					<div class="room-info p-4">
 						<h6 class="title"><a class="text-secondery" href="#">Toys</a></h6>
 						<span>Sami duble bed and single veranda. A guest room and furniture.</span> <span class="facility-1 text-secondery">Free Wifi / Cable Tv / Breakfast</span> </div>
 					<div class="bg-gray d-table px-4 py-3 w-100">
-						<a href="#" class="btn btn-primary-bg float-left">View Details</a>
+						<a href="{{ url('/experience') }}" class="btn btn-primary-bg float-left">View Details</a>
 						<!-- <div class="h5 per-night text-secondery">$120 <small>/ Night</small> </div> -->
 					</div>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-4">
-				<div class="room-thumb-grid-2 hover_zoom mb-4 bg-light" >
+				<div class="room-thumb-grid-2 hover_zoom mb-4 bg-light hover-shadow-lg" >
 					<div class="thumb-top overflow_hidden" style="height: 250px;">
 						<div class="room-size upper-place-bottom-right">10 X 12 Sqft</div>
-						<img src="images/WhatsApp Image 2019-11-02 at 11.30.33 PM(3).jpeg"> </div>
+						<img src="images/exterior/13.jpeg" alt="Locations"> </div>
 					<div class="room-info p-4">
 						<h6 class="title"><a class="text-secondery" href="#">Locations</a></h6>
 						<span>Single bed and single window. Include a sofa and other small furniture</span> <span class="facility-1 text-secondery">Free Wifi / Cable Tv / Breakfast</span> </div>
 					<div class="bg-gray d-table px-4 py-3 w-100">
-						<a href="#" class="btn btn-primary-bg float-left">View Details</a>
+						<a href="{{ url('/experience') }}" class="btn btn-primary-bg float-left">View Details</a>
 						<!-- <div class="h5 per-night text-secondery">$50 <small>/Night</small> </div> -->
 					</div>
 				</div>
@@ -316,7 +317,7 @@
 <!-- Living Room 2 Section End --> 
 
 <!-- Blank Area Start -->
-<div class="full-row overlay-secondery-opacity-65 bg-standby" style="background-image: url('images/WhatsApp Image 2019-11-02 at 11.30.31 PM(2).jpeg'); padding-bottom: 430px">
+<div class="full-row overlay-secondery-opacity-65 bg-standby" style="background-image: url('images/interior/3.jpg'); padding-bottom: 430px">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
@@ -334,32 +335,32 @@
 <section class="full-row" style="margin-top: -500px;">
 	<div class="container">
 		<div class="row photo-gallery">
-			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(2).jpeg" data-fancybox="gallery">
-				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(2).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+			<div class="col-lg-4 col-md-6 shadow-sm"> <a class="img_view mb-4" href="{{ asset('images/exterior/1.jpg') }}" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="{{ asset('images/exterior/1.jpg') }}" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
 				</a> </div>
-			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(3).jpeg" data-fancybox="gallery">
-				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(3).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="{{ asset('images/exterior/2.jpg') }}" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="{{ asset('images/exterior/2.jpg') }}" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
 				</a> </div>
-			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(4).jpeg" data-fancybox="gallery">
-				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(4).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="{{ asset('images/exterior/3.jpg') }}" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="{{ asset('images/exterior/3.jpg') }}" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
 				</a> </div>
-			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(5).jpeg" data-fancybox="gallery">
-				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(5).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="{{ asset('images/exterior/4.jpg') }}" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="{{ asset('images/exterior/4.jpg') }}" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
 				</a> </div>
-			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(6).jpeg" data-fancybox="gallery">
-				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.30 PM(6).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="{{ asset('images/exterior/5.jpg') }}" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="{{ asset('images/exterior/5.jpg') }}" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
 				</a> </div>
-			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.26 PM(5).jpeg" data-fancybox="gallery">
-				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.26 PM(5).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="{{ asset('images/exterior/6.jpg') }}" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="{{ asset('images/exterior/6.jpg') }}" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
 				</a> </div>
-			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.27 PM(1).jpeg" data-fancybox="gallery">
-				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.27 PM(1).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="{{ asset('images/exterior/7.jpg') }}" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="{{ asset('images/exterior/7.jpg') }}" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
 				</a> </div>
-			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.27 PM.jpeg" data-fancybox="gallery">
-				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.27 PM.jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="{{ asset('images/exterior/8.jpg') }}" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="{{ asset('images/exterior/8.jpg') }}" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
 				</a> </div>
-			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="images/WhatsApp Image 2019-11-02 at 11.30.28 PM(5).jpeg" data-fancybox="gallery">
-				<div class="hover_zoom"> <img src="images/WhatsApp Image 2019-11-02 at 11.30.28 PM(5).jpeg" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
+			<div class="col-lg-4 col-md-6"> <a class="img_view mb-4" href="{{ asset('images/exterior/9.jpg') }}" data-fancybox="gallery">
+				<div class="hover_zoom"> <img src="{{ asset('images/exterior/9.jpg') }}" alt="" height="250"> <span class="text-primary xy-center"><i class="fa fa-plus"></i></span> </div>
 				</a> </div>
 		</div>
 	</div>

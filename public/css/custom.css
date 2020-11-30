@@ -6,3 +6,17 @@
     position: absolute;
     background: linear-gradient(2deg, #2196f394 -12%, transparent);
 }
+
+.vessel-item {
+    height: 400px;
+}
+.vessel-item img{
+    height: 100%;
+    width: 100%;
+}
+#specifications table td{
+    display: flex;
+}
+.hover-shadow-lg:hover {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
