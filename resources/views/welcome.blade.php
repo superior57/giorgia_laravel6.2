@@ -6,37 +6,40 @@
 
 @section('content')
 
-<div class="position-relative" style="height:100vh;margin:0 auto;margin-bottom: 0px;">
-			<div id="slider5" class="owl-carousel slider-5" style="z-index: 1;">
-				<!-- Slide 1-->
-				<div class="item active"
-					data-ls="bgsize:cover; bgposition:50% 50%; duration:8000; transition2d:3; timeshift:-500; deeplink:home; kenburnszoom:in; kenburnsrotate:0; kenburnsscale:1.1; parallaxevent:scroll; parallaxdurationmove:500;">
-					<img width="1920" height="1080" src="{{asset('images/backgrounds/1.jpg')}}" class="ls-bg" alt="" />
-					<!-- <img width="300" height="300" class="" src="{{ asset('images/WhatsApp Image 2019-11-02 at 11.30.25 PM(2).jpeg') }}" alt=""> -->
-					<div class="overlay"></div>
-				</div>
+<div class="position-relative sidernw" style="height:100vh;margin:0 auto;margin-bottom: 0px;">
+			
+           <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="{{asset('images/backgrounds/1.jpg')}}" alt="images not found">
+                    <div class="cover">
+                        <div class="container">
+                            <div class="header-content">
+                                <div class="line"></div>
+                                <h2>Build your Next Holiday Trip with Us</h2>
+                                <h1><span>Create</span><span class="font-weight-bold"> Your Tour</span></h1>
+                                <h4><a class="slide-button">Get in touch</a></h4>
+                            </div>
+                        </div>
+                     </div>
+                </div>                    
+                <div class="item">
+                    <img src="{{asset('images/backgrounds/2.jpg')}}" alt="images not found">
+                    <div class="cover">
+                        <div class="container">
+                            <div class="header-content">
+                                <div class="line animated bounceInLeft"></div>
+                                <h2>Enjoy the Best Destinations with Our Travel Agency</h2>
+                                <h1><span>Explore</span><span class="font-weight-bold"> The World</span></h1>
+                                <h4><a class="slide-button">Get in touch</a></h4>
+                            </div>
+                        </div>
+                     </div>
+                </div>                
+                
+				
+            </div>       
 
-				<!-- Slide 2-->
-				<div class="item"
-					data-ls="bgsize:cover; bgposition:50% 50%; duration:8000; transition2d:3; deeplink:latest-works; kenburnszoom:out; kenburnsrotate:0; kenburnsscale:1.1; parallaxtype:3d; parallaxevent:scroll; parallaxdurationmove:500; parallaxrotate:4;">
-					<img width="1920" height="1080" src="{{asset('images/backgrounds/2.jpg')}}" class="ls-bg" alt="" />
-					<div class="overlay"></div>
-				</div>
 
-				<!-- Slide 3-->
-				<div class="item"
-					data-ls="bgsize:cover; bgposition:50% 50%; duration:8000; transition2d:3; deeplink:contact-us; kenburnszoom:in; kenburnsscale:1.2; parallaxevent:scroll;">
-					<img width="1920" height="1080" src="{{asset('images/exterior/2.jpg')}}" class="ls-bg" alt="" />
-					<div class="overlay"></div>
-				</div>
-
-				<!-- Slide 4-->
-				<div class="item"
-					data-ls="bgsize:cover; bgposition:50% 50%; duration:8000; transition2d:3; deeplink:contact-us; kenburnszoom:in; kenburnsscale:1.2; parallaxevent:scroll;">
-					<img width="1920" height="1080" src="{{asset('images/exterior/1.jpg')}}" class="ls-bg" alt="" />
-					<div class="overlay"></div>
-				</div>
-			</div>
 			<!-- <div class="angle-shade-2" ></div> -->
 		</div>
 		<!-- Slider End -->
@@ -45,11 +48,11 @@
 			<div class="container">
 				<div class="row">
 					<div>
-						<div class="main-title-area">
-							<h2 class="title">About Giorgia </h2>
+					<div class="main-title-area">
+						<h2 class="text-width-medium text-spacing-75 wow fadeInLeft" style="animation-delay: .2s">About Giorgia</h2>
 						</div>
-						<p>Understated Elegance with a Contemporary Edge</p>
-						<p>There is simply no better way to experience the sun and sea than the combination of luxury and
+						<p class="text-width-medium text-spacing-75 wow fadeInLeft" style="animation-delay: .4s">Understated Elegance with a Contemporary Edge</p>
+						<p class="text-width-medium text-spacing-75 wow fadeInLeft" style="animation-delay: .6s">There is simply no better way to experience the sun and sea than the combination of luxury and
 							privacy offered by a bespoke vacation aboard Motor Yacht Giorgia. Embark on a hedonistic voyage
 							specially designed to give you and your guests a whole body, mind, and spirit Zen immersion on this
 							37-meter floating oasis. Far from the crowds and restrictions of other holiday options, our wellness
@@ -98,9 +101,9 @@
 							ordinary</span> -->
 					</div>
 				</div>
-				<div class="row hover-shadow-lg py-4" style="margin-bottom: 150px;">
+				<div class="row hover-shadow-lg py-4 wow fadeInRight" style="margin-bottom: 150px;animation-delay: 0.5s;">
 					<div class="col-lg-5">
-						<div class="img-slide">
+						<div class="img-slide text-width-medium text-spacing-75 wow fadeInLeft" style="animation-delay: 0.3s;">
 							<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 								<div class="carousel-inner">
 									<div class="carousel-item active"> <img src="{{ asset('images/interior/1.jpg') }}" alt="Image not found!">
@@ -130,11 +133,11 @@
 					<div class="col-lg-7">
 						<div class="text-right py-4 px-4">
 							<p>
-							<h6>MY Giorgia can accommodate up to ten guests in five well-appointed staterooms, all featuring ensuite marble bathrooms. </h6>
+							<h6 class="" style="animation-delay: 0.2s;">MY Giorgia can accommodate up to ten guests in five well-appointed staterooms, all featuring ensuite marble bathrooms. </h6>
 
-							The master suite, found on the main deck, comes with a walk-through study and double sinks. Below deck you will find two VIP suites and twin Guest suites. 
+							<p  class="" style="animation-delay: 0.4s;">The master suite, found on the main deck, comes with a walk-through study and double sinks. Below deck you will find two VIP suites and twin Guest suites. 
 
-							Classically designed interiors and minimalist dark wood bulkheads contribute to a contemporary ambience, while plush furnishings create a sense of warmth, elegance and comfort.
+							Classically designed interiors and minimalist dark wood bulkheads contribute to a contemporary ambience, while plush furnishings create a sense of warmth, elegance and comfort.</p>
 							</p>
 						</div>
 					</div>
@@ -148,20 +151,20 @@
 							ordinary</span> -->
 					</div>
 				</div>
-				<div class="row hover-shadow-lg py-4">            
+				<div class="row hover-shadow-lg py-4 wow fadeInLeft" style="animation-delay: 0.6s;">            
 					<div class="col-lg-7">
 						<div class="py-4 px-4">
 							<p>
-							<h6> Giorgia is a true masterpiece of high-end yachting design, featuring teak beams and elegant, no-fuss exteriors. Wherever you are going you can rest assured that you will arrive in style.</h6>
+							<h6 class="" style="animation-delay: 0.2s;" > Giorgia is a true masterpiece of high-end yachting design, featuring teak beams and elegant, no-fuss exteriors. Wherever you are going you can rest assured that you will arrive in style.</h6>
 
-							A plethora of high-end entertainment and leisure facilities make Giorgia perfect for enjoying a family vacation, socializing with friends, or even more formal endeavours.  
+							<p class="" style="animation-delay: 0.4s;">A plethora of high-end entertainment and leisure facilities make Giorgia perfect for enjoying a family vacation, socializing with friends, or even more formal endeavours.  
 
 							With a choice of three decks, all featuring their own dining space, you can savour your meals al fresco, sip cocktails under the starry sky at the sundeck bar, or indulge in strawberries and champagne while soaking in the spa pool.
-							</p>
+</p></p>
 						</div>
 					</div>
 					<div class="col-lg-5">
-						<div class="img-slide">
+						<div class="img-slide img-slide text-width-medium text-spacing-75 wow fadeInRight animated" style="animation-delay: 0.3s;">
 							<div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
 								<div class="carousel-inner">
 									<div class="carousel-item active"> <img src="{{ asset('images/exterior/1.jpg') }}" alt="Image not found!">
@@ -194,6 +197,7 @@
 
 		<!-- Living Room 2 Section Start -->
 		<section class="full-row bg-gray parallax-container">
+		<div class="overlay"></div>
 			<div class="material-parallax parallax">
 				<img src="{{ asset('images/exterior/1.jpg') }}" alt="">
 			</div>
@@ -206,65 +210,82 @@
 							</div>
 							<!-- <span class="subtext text-secondary text-center mb-5 box-width">Across the street from the ordinary</span> </div> -->
 					</div>
-
-					<table class='specification'>
-						<tr class="fadeInLeftBig">
+					<div id="slider5" class="owl-carousel slider-5" style="z-index: 1;">
+				<!-- Slide 1-->
+				<div class="item active" data-ls="bgsize:cover; bgposition:50% 50%; duration:8000; transition2d:3; timeshift:-500; deeplink:home; kenburnszoom:in; kenburnsrotate:0; kenburnsscale:1.1; parallaxevent:scroll; parallaxdurationmove:500;">
+					<table class="specification">
+						<tbody><tr class="fadeInLeftBig">
 							<th>Length</th>
-							<td>{{$specification['length']}}</td>
+							<td>36.6 m (120’)</td>
 						</tr>
 						<tr>
 							<th>Beam</th>
-							<td>{{$specification['beam']}}</td>
+							<td>7.86 m (26’)</td>
 						</tr>
 						<tr>
 							<th>Draft</th>
-							<td>{{$specification['draft']}}</td>
+							<td>1.96 m (6’)</td>
 						</tr>
 						<tr>
 							<th>Built</th>
-							<td>{{$specification['built']}}</td>
+							<td>2009</td>
 						</tr>
 						<tr>
 							<th>Builder</th>
-							<td>{{$specification['builder']}}</td>
+							<td>Azimut Benetti SpA</td>
 						</tr>
 						<tr>
 							<th>Engines</th>
-							<td>{{ $specification['engines']}}</td>
+							<td>2 x Caterpillar C32 1550 bhp</td>
 						</tr>
 						<tr>
 							<th>Flag</th>
-							<td><img src="{{ asset('images/flag/manflag.png') }}" style="width: 50px; height: 30px"></td>
+							<td><img src="http://127.0.0.1:8000/images/flag/manflag.png" style="width: 50px; height: 30px"></td>
 						</tr>
+						
+					</tbody></table>
+					
+					
+				</div>
+
+				<!-- Slide 2-->
+				<div class="item" data-ls="bgsize:cover; bgposition:50% 50%; duration:8000; transition2d:3; deeplink:latest-works; kenburnszoom:out; kenburnsrotate:0; kenburnsscale:1.1; parallaxtype:3d; parallaxevent:scroll; parallaxdurationmove:500; parallaxrotate:4;">
+					<table class="specification">
+						<tbody>
 						<tr>
 							<th>Hull</th>
-							<td>{{ $specification['hull']}}</td>
+							<td>Glass-Reinforced Plastic</td>
 						</tr>
 						<tr>
 							<th>Hull Type</th>
-							<td>{{ $specification['hull_type']}}</td>
+							<td>Displacement</td>
 						</tr>
 						<tr>
 							<th>Cabins</th>
-							<td>{{ $specification['cabins']}}</td>
+							<td>5</td>
 						</tr>
 						<tr>
 							<th>Guests</th>
-							<td>{{ $specification['guests']}}</td>
+							<td>10</td>
 						</tr>
 						<tr>
 							<th>Crew</th>
-							<td>{{ $specification['crew']}}</td>
+							<td>7</td>
 						</tr>
 						<tr>
 							<th>Speed</th>
-							<td>{{ $specification['speed']}}</td>
+							<td>13 knots (cruising)  16 knots (max)</td>
 						</tr>
 						<tr>
 							<th>Range</th>
-							<td>{!! $specification['range'] !!}</td>
+							<td>3,500 mm</td>
 						</tr>
-					</table>
+					</tbody></table>					
+				</div>
+
+				
+			</div>
+					
 				</div>
 			</div>
 		</section>
@@ -382,4 +403,30 @@
     // Wrap every letter in a span
 })()
 </script>
+<script type="text/javascript">
+	$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    dots:false,
+    nav:true,
+    mouseDrag:false,
+    autoplay:true,
+    animateOut: 'slideOutUp',
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1200:{
+            items:1
+        },
+		1800:{
+            items:1
+        }
+    }
+});
+</script>
+
 @endpush
