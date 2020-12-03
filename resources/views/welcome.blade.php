@@ -411,7 +411,7 @@
     nav:true,
     mouseDrag:false,
     autoplay:true,
-    animateOut: 'slideOutUp',
+    animateOut: 'slideOutLeft',
     responsive:{
         0:{
             items:1
