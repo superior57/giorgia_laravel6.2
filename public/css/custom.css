@@ -10,13 +10,50 @@
 .vessel-item {
     height: 400px;
 }
-.vessel-item img{
+
+.vessel-item img {
     height: 100%;
     width: 100%;
 }
-#specifications table td{
+
+#specifications table td {
     display: flex;
 }
+
 .hover-shadow-lg:hover {
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+}
+
+.material-parallax {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    right: -1px;
+    bottom: 0;
+    z-index: 0;
+    background-position: center center;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 1;
+}
+
+.material-parallax img {
+    /* display: none; */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    min-width: 101%;
+    min-height: 101%;
+    max-width: none;
+    transform: translate3d(-50%, 0, 0);
 }

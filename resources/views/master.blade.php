@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="{{asset('webfonts/flaticon/flaticon.css')}}">
     <link rel="stylesheet" href="{{asset('css/animations.css')}}">
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
+    <link rel="stylesheet" href="{{asset('css/admin_home/css/animate.css')}}">
     
 
     @stack('styles')
