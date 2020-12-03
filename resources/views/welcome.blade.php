@@ -266,7 +266,7 @@
 						</tr>
 						<tr>
 							<th>Flag</th>
-							<td><img src="http://127.0.0.1:8000/images/flag/manflag.png" style="width: 50px; height: 30px"></td>
+							<td><img class="float-right" src="http://127.0.0.1:8000/images/flag/manflag.png" style="width: 50px; height: 30px"></td>
 						</tr>
 						
 					</tbody></table>
