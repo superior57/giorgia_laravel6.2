@@ -21,48 +21,7 @@
                             </div>
                         </div>
                      </div>
-                </div>                    
-                <div class="item">
-                    <img src="{{asset('images/backgrounds/2.jpg')}}" alt="images not found">
-                    <div class="cover">
-                        <div class="container">
-                            <div class="header-content">
-                                <div class="line animated bounceInLeft"></div>
-                                <h2>Enjoy the Best Destinations with Our Travel Agency</h2>
-                                <h1><span>Explore</span><span class="font-weight-bold"> The World</span></h1>
-                                <h4><a href="{{ url('/contact') }}" class="slide-button text-white">Get in touch</a></h4>
-                            </div>
-                        </div>
-                     </div>
                 </div>    
-				<div class="item">
-                    <img src="{{asset('images/exterior/3.jpg')}}" alt="images not found">
-                    <div class="cover">
-                        <div class="container">
-                            <div class="header-content">
-                                <div class="line"></div>
-                                <h2>Enjoy your refreshment in our fresh exterior</h2>
-                                <h1><span>Create</span><span class="font-weight-bold"> Your Tour</span></h1>
-                                <h4><a href="{{ url('/booking') }}" class="slide-button text-white">Book now</a></h4>
-                            </div>
-                        </div>
-                     </div>
-                </div>     
-				<div class="item">
-                    <img src="{{asset('images/interior/2.jpg')}}" alt="images not found">
-                    <div class="cover">
-                        <div class="container">
-                            <div class="header-content">
-                                <div class="line animated bounceInLeft"></div>
-                                <h2>Very gentle and friendly interior structure</h2>
-                                <h1><span>Explore</span><span class="font-weight-bold"> The World</span></h1>
-                                <h4><a href="{{ url('/booking') }}" class="slide-button text-white">Book now</a></h4>
-                            </div>
-                        </div>
-                     </div>
-                </div>           
-                
-				
             </div>       
 
 
@@ -434,23 +393,14 @@
     loop:true,
     margin:10,
     dots:false,
-    nav:true,
+    nav:false,
     mouseDrag:false,
-    autoplay:true,
+    autoplay:false,
     animateOut: 'slideOutLeft',
     responsive:{
         0:{
             items:1
-        },
-        // 600:{
-        //     items:1
-        // },
-        // 1200:{
-        //     items:1
-        // },
-		// 1800:{
-        //     items:1
-        // }
+        }
     }
 });
 </script>

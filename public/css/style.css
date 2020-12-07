@@ -90,7 +90,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
 /*===== Nav Color CSS =====*/
 .btn-lg-secondery, 
 .navbar-light .navbar-nav .nav-link{
-	color: var(--white-color);
+	color: var(--primary-theme-color);
 }
 .bg-black {
 	background-color: var(--black-color);
@@ -357,7 +357,7 @@ a.btn-scroll:hover,
 .social-media-3 a:hover,
 .event-item .inner-title a:hover,
 .blog_widget ul li a:hover{
-	color: var(--primary-theme-color) !important;
+	color: var(--yellow-color) !important;
 }
 /*===== Primary BG Color CSS =====*/
 .bg-primary,
@@ -1544,11 +1544,14 @@ section{
 }
 .top-header{
 	font-size: 13px;
-	background-color:white;
+	background-color:var(--primary-theme-color);
 }
 .top-header ul li{
 	margin-left: 20px;
 	float: left
+}
+.top-header *{
+	color: var(--white-color);
 }
 .navbar-nav .nav-link {
 	font-weight: 500;
@@ -4113,7 +4116,7 @@ No media query for `xs` since this is the default in Bootstrap*/
 		top: -10px
 	}
 	#header.fixed-top {
-		position: fixed !important;
+		/* position: fixed !important; */
 		top: 0;
 		right: 0;
 		left: 0;
@@ -4131,7 +4134,7 @@ No media query for `xs` since this is the default in Bootstrap*/
 	}
 	.header-1 .navbar-header {
 		/* padding-bottom: 10px; */
-		background-color:#00b0ff;
+		background-color:#FFF;
 	}
 	.header-1.fixed-top .navbar-header,
 	.header-2.fixed-top .navbar-header	{

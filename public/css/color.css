@@ -2,10 +2,10 @@
 Theme Color All Codes Variable
 ==================================*/
 :root {
-	 --primary-theme-color: #2196F3;  /* theme primary color */
+	 --primary-theme-color: #072847;  /* theme primary color */
 }
 :root {
-	 --secondery-theme-color: #00b0ff;  /* theme secondery color */
+	 --secondery-theme-color: #0d68c5;  /* theme secondery color */
 }
 :root {
 	 --dark-theme-color: #1a1a1a;  /* theme dark font color */
@@ -64,4 +64,11 @@ Font Variable
 }
 :root {
 	--overlay-dark: #1c1e1f7d
+}
+
+:root {
+	--third-theme-color: #072847;
+}
+:root {
+	--yellow-color: #fdd132;
 }

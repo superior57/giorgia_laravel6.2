@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Meta Tags -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Vilena template">
+    <meta name="description" content="Giorgia">
     <meta name="keywords" content="blog, bootstrap, company portfolio, cv template, experience, html template, one page, personal, portfolio, team members">
     <meta name="author" content="Unicoder">
 
@@ -50,8 +50,9 @@
             @yield('content')
             </div>
             @yield('footer')
+
             <!-- Copyright Section End -->
-		    <div class="scroll-to-top"> <a href="#" class="btn-scroll" data-target="body"><i class="fa fa-angle-up" aria-hidden="true"></i><b>Back to Top</b></a> </div>
+		    <!-- <div class="scroll-to-top"> <a href="#" class="btn-scroll" data-target="body"><i class="fa fa-angle-up" aria-hidden="true"></i><b>Back to Top</b></a> </div> -->
         </div>
     </div>
 
